@@ -1,17 +1,110 @@
+# Target-Job_Test_Analyst_Júnior
 
-# Target-Job_Development_Test_Internship
-Repositório destinado ao processo de estágio da empresa Target Sistemas
+## Repositório destinado ao processo seletivo da empresa Target Sistemas
+
+Instruções gerais
+Olá! Estamos muito felizes com a sua participação em nosso processo seletivo :)
+Você chegou na fase de teste, o intuito é analisar seus conhecimentos técnicos.
+Espero te ver na próxima fase em? Boa sorte! :)
+
+Olá! Bem-vindes ao teste de Analista de Teste :)
+
+Esta prova tem 4 questões e tem o objetivo de compreender um pouco mais dos seus
+conhecimentos técnicos,
+
+Separe um tempinho, vá para um ambiente mais calmo e arrase!
+
+Boa sorte!
+
+Certifique-se de reservar tempo suficiente para fazer o teste sem interrupções.
+Caso você saia do teste sem finalizá-lo, será considerado como concluído e você
+não poderá fazer novamente.
 
 - [x] 1º Pergunta
 - [x] 2º Pergunta
 - [x] 3º Pergunta
 - [x] 4º Pergunta
-- [x] 5º Pergunta
-- [x] Redação
 
 #### Perguntas:
 
-1) Observe o trecho de código abaixo:
+1) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora de todos os
+ dias de um ano, faça um programa, na linguagem que desejar, que calcule e retorne:
+
+- O menor valor de faturamento ocorrido em um dia do ano;
+- O maior valor de faturamento ocorrido em um dia do ano;
+- Número de dias no ano em que o valor de faturamento diário foi superior à média anual.
+
+*IMPORTANTE*:
+
+Considerar o vetor já carregado com as informações de valor de faturamento.
+Podem existir dias sem faturamento, como nos finais de semana e feriados.
+Estes dias devem ser ignorados no cálculo da média.
+Utilize o algoritmo mais veloz que puder definir.
+
+2) Relacione os seguintes conceitos à sua respectiva descrição.
+
+IMPORTANTE: note que apenas 4 dos 6 conceitos listados possuem uma descrição correspondente.
+
+Conceitos
+
+I – Caso de Uso
+
+II – Coesão
+
+III – Composição
+
+IV – Classe
+
+V – Polimorfismo
+
+VI – Acoplamento
+
+
+Descrição
+
+A) É um tipo de agregação.
+
+B) É uma medida do grau de dependência entre objetos.
+
+C) É a propriedade por meio da qual um atributo ou variável pode apontar para objetos de diferentes classes em horas diferentes.
+
+D) É comumente definida(o) por suposições, pré-condições, pós-condições, garantias mínimas e garantias de sucesso
+
+R: (III - A) / (VI - C) / (V - D) / (i - B)
+
+3) Banco de dados
+
+Uma empresa solicitou a você um aplicativo para manutenção de um cadastro de clientes. Após a reunião de definição dos requisitos,
+as conclusões foram as seguintes:
+
+- Um cliente pode ter um número ilimitado de telefones;
+
+- Cada telefone de cliente tem um tipo, por exemplo: comercial, residencial, celular, etc. O sistema deve permitir 
+cadastrar novos tipos de telefone;
+
+- A princípio, é necessário saber apenas em qual estado brasileiro cada cliente se encontra. O sistema deve permitir 
+cadastrar novos estados;
+
+
+Você ficou responsável pela parte da estrutura de banco de dados que será usada pelo aplicativo. Assim sendo:
+
+a) Proponha um modelo lógico para o banco de dados que vai atender a aplicação. Desenhe as tabelas necessárias, 
+os campos de cada uma e marque com setas os relacionamentos existentes entre as tabelas;
+
+b) Aponte os campos que são chave primária (PK) e chave estrangeira (FK);
+
+c) Faça uma busca utilizando comando SQL que traga o código, a razão social e o(s) telefone(s) de todos os 
+clientes do estado de São Paulo (código “SP”);
+
+Respostas:
+
+https://drive.google.com/file/d/1KQhKLKCigibiH5_-sLWY6_FPPskxwFun/view?usp=sharing
+
+SELECT c.id as codigo, c.razaoSocial, t.tipo, t.ddd, t.numero
+FROM Clientes as c, Telefones as t, Estados as e
+WHERE c.id = t.idCliente and e.id = c.idEstado and regiao = 'SP'
+
+4) Observe o trecho de código abaixo:
 ```c
 int INDICE = 13, SOMA = 0, K = 0;
 enquanto K < INDICE faça
@@ -23,51 +116,4 @@ imprimir(SOMA);
 ```
 Ao final do processamento, qual será o valor da variável SOMA?
 
-
-2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores
-anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde,
-informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado
-pertence ou não a sequência.
-
-*IMPORTANTE:* <br>
-Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido
-no código;
-
-
-3) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem
-que desejar, que calcule e retorne:
-- O menor valor de faturamento ocorrido em um dia do mês;
-- O maior valor de faturamento ocorrido em um dia do mês;
-- Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
-
-*IMPORTANTE:* <br>
-a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal; <br>
-b) Podem existir dias sem faturamento, como nos finais de semana e feriados.
-Estes dias devem ser ignorados no cálculo da média;
-
-
-4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
-
-> SP – R$67.836,43 <br>
-> RJ – R$36.678,66 <br>
-> MG – R$29.229,88 <br>
-> ES – R$27.165,48 <br>
-> Outros – R$19.849,53 <br>
-
-Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve
-dentro do valor total mensal da distribuidora.
- 
-
-5) Escreva um programa que inverta os caracteres de um string.
-
-*IMPORTANTE:* <br>
-a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código; <br>
-b) Evite usar funções prontas, como, por exemplo, reverse; <br>
-
-
-#### Tema da redação:
-O manifesto ágil foi um divisor na forma como os projetos eram desenvolvidos,
-mudando a maneira de como montamos os times e controlamos os processos,
-além da valorização e aproximação com o cliente, tanto que hoje é um tema comum nas graduações e cursos.
-
-"Você consegue falar um pouco sobre uma das metodologias que surgiram e o que te chama atenção nela?"
+Resposta: 91
