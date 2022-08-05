@@ -1,10 +1,10 @@
-faturamento_mensal = {'SP': 67836.43, 'RJ': 36678.66, 'MG': 29229.88, 'ES': 27165.48, 'Outros': 19849.53}
+indice = 13
+soma = 0
+k = 0
 
-faturamento_total_mensal = sum(faturamento_mensal.values())
-percentual_faturamento_mensal = dict()
-for estado in faturamento_mensal:
-    percentual_faturamento_mensal[estado] = '{:.2%}'.format(faturamento_mensal[estado] / faturamento_total_mensal)
+while k < indice:
+    k += 1
+    soma += k
+    print("iteracao: ", k, "\t|\tvalor da soma: ", soma)
 
-print("\nFaturamento mensal por estado: ", faturamento_mensal)
-print("\nFaturamento total mensal: ", faturamento_total_mensal)
-print("\nPercentual de representação por estado: ", percentual_faturamento_mensal)
+print("\nSoma = ", soma)
